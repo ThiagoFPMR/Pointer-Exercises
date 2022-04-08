@@ -1,0 +1,16 @@
+A primeira operação é válida pois o valor passado para p 
+é um valor de endereço incrementado (se o vetor começasse
+no endereço 0, o endereço passado para p seria 1).
+
+Tanto a segunda quanto terceira opção causam erros no código.
+Isso ocorre pois tentam incrementar o valor de vet. Como
+um vetor deve sempre apontar para o início da sequência, o
+valor para o qual ele aponta não pode ser incrementado.
+
+A quarta expressão passa o valor númerico do primeiro
+elemento de Vet como endereço de memória para o qual p deve
+apontar. Como esse valor não foi inicializado, o resultado
+é um ponteiro nulo. Pelo mesmo motivo, o incremento também
+não altera o valor do primeiro elemento. A expressão é 
+válida e não trás erros de código (só não faz nada alem de
+p = NULL).

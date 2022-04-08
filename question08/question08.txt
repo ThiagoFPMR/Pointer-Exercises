@@ -1,0 +1,4 @@
+Os dois programas inicializam o mesmo vetor e realizam
+um loop com o mesmo número de iterações. O primeiro programa
+imprime valor do iesimo elemento a cada iteração do loop
+enquanto o segundo imprime seus endereços.
