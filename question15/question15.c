@@ -66,6 +66,7 @@ int main() {
     for (i = 1; i < n; i++) printf(", %f", a[i]);
     // Terminando a impressão do vetor e pulando a linha
     printf("]\n");
+    free(a);
 
     return 0;
 }

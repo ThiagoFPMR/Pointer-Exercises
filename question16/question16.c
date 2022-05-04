@@ -77,5 +77,7 @@ int main() {
     printf("Tempo levado pelo bubbleSort: %f s\n", ((float)(t1-start))/CLOCKS_PER_SEC);
     printf("Tempo levado pelo qsort: %f s\n", ((float)(t2-t1))/CLOCKS_PER_SEC);
 
+    free(a);
+
     return 0;
 }

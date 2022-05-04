@@ -34,6 +34,6 @@ int main() {
     printf("[%f", a[0]);
     for (i = 1; i < n; i++) printf(", %f", a[i]);
     printf("]\n");
-
+    free(a);
     return 0;
 }
