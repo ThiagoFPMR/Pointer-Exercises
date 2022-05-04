@@ -5,7 +5,7 @@
 int main() {
     int n, i;
     float *a, d;
-    GC_INIT()
+    GC_INIT();
     // Alocando dinamicamente o vetor de tamanho n
     printf("Defina o tamanho do vetor: ");
     scanf("%d", &n);
