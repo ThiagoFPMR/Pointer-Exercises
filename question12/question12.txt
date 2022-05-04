@@ -1,0 +1,3 @@
+Um ponteiro para função não aponta para nenhuma variavel armazenada em um endereço
+de memória. Ao invés disso, ele aponta para o endereço que contem o inicio do código
+da função, o qual é alocado pelo programa quando a função é declarada.

@@ -1,0 +1,12 @@
+void matrixMult(int **A, int al, int ac, int **B, int bc, int **C) {
+    int i, j, k;
+    // Implementando a multiplicação de matrizes
+    for (i = 0; i < al; i++) {
+        for (j = 0; j < bc; j++) {
+            C[i][j] = 0;
+            for (k = 0; k < ac; k++) {
+                C[i][j] += A[i][k]*B[k][j];
+            }
+        }
+    }
+}

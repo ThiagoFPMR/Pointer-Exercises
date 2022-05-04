@@ -1,0 +1,29 @@
+void bubbleSort(void *base, size_t num, size_t size, int (*compar)(const void*, const void*)) {
+    unsigned int i, j, k, replaced = 1;
+    // Cria um ponteiro de char a partir do vetor base para permitir operações que
+    // envolvam navegar o vetor e copiar elementos
+    char *iterator = base;
+    // Roda o bubble sort
+    for (i = 0; i < num; i++) {
+        // Caso não tenha sido feita nenhuma substituição no ultimo loop, a ordenação é encerrada
+        if (replaced == 0) break;
+        // Reseta o a variavel de checagem
+        replaced = 0;
+        // Roda uma unica iteração de bubble sort
+        for (j = 0; j < num-1; j++) {
+            // Substitui o j-esimo valor pelo valor acima dele caso esse seja menor que o j-esimo valor
+            if (compar((void*)&iterator[j*size], (void*)&iterator[(j+1)*size]) == 1) {
+                // Copia os valores do j-esimo elemento de base para o vetor temporario tmp
+                char *tmp = (char*)malloc(size*sizeof(char));
+                for (k = 0; k < size; k++) tmp[k] = iterator[j*size+k];
+                // Troca o j-esimo valor pelo valor acima dele com o auxilio de tmp
+                for (k = 0; k < size; k++) iterator[j*size+k] = iterator[(j+1)*size+k];
+                for (k = 0; k < size; k++) iterator[(j+1)*size+k] = tmp[k];
+                // Declara que houve uma substituição através da variável 'replaced'
+                replaced = 1;
+                // Libera a memória alocada por tmp
+                free(tmp);
+            }
+        }
+    }
+}
